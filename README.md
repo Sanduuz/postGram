@@ -51,6 +51,9 @@ After that try to install lxml again.
 `pip2 install lxml`
 It should work, if it didn't make sure to message me. (Contact Information Found Below)
 
+To run the script, remember to use python2!
+`python2 postGram.py`
+
 ---
 
 ### Bugs
