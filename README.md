@@ -47,6 +47,8 @@ If using this application on phone, either remove the extension or input the lin
 ## Installation Guide (Android)
 Installation Guide for Android. Windows and Linux systems doesn't need any installation.
 
+You need a terminal emulator like Termux.
+
 The installation is for installing lxml on python.
 
 First try to install lxml by `pip2 install lxml`.
