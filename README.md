@@ -7,7 +7,12 @@ A tool for downloading posts from public instagram profiles.
 ## What is postGram?
 postGram is a tool made for downloading Instagram posts from public users.
 
-Currently postGram is supported by Windows and Unix systems.
+---
+
+## Supported Operating Systems
+ * Windows
+ * Linux
+ * Android
 
 ---
 
