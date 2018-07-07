@@ -23,6 +23,8 @@ python postGram.py link P/V
 
 P stands for pictures and V for videos.
 
+If you use the P flag for videos, you will get the thumbnail of the video.
+
 ### Examples:
 ```
 python postGram.py "https://www.instagram.com/p/BkF4khTHctp/?utm_source=ig_share_sheet&igshid=ls9gad4okp34" P
