@@ -70,6 +70,14 @@ To run the script, remember to use python2!
 ---
 
 ### Bugs
+
+If you are trying to install the dependencies through 
+postGram, make sure your `pip --version` is max 9.0.3.
+
+pip version 10.0.* doesn't support installing dependencies through the pip module in scripts.
+
+You can downgrade to version 9.0.3 with `python -m pip install pip==9.0.3
+
 If you find any bugs, please report them to me ASAP!
 
 You can contact me at:
