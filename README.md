@@ -42,16 +42,21 @@ Installation Guide for Android. Windows and Linux systems doesn't need any insta
 The installation is for installing lxml on python.
 
 First try to install lxml by `pip2 install lxml`.
+
 Errors will probably occur, but to fix them, try the next command.
 
 `apt update && apt upgrade && apt dist-upgrade`
+
 `apt install python2 python2-dev clang libcrypt libcrypt-dev libxml2 libxml2-dev libxml2-utils libxslt libxslt-dev`
 
 After that try to install lxml again.
+
 `pip2 install lxml`
+
 It should work, if it didn't make sure to message me. (Contact Information Found Below)
 
 To run the script, remember to use python2!
+
 `python2 postGram.py`
 
 ---
