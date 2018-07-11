@@ -58,6 +58,8 @@ def main():
         if postLink == None or picOrVid == None:
             print "Usage: python postGram.py *post link* *[P]icture/[V]ideo*"
         if picOrVid == "P" or picOrVid == "PICTURE" or picOrVid == "p" or picOrVid == "picture" or picOrVid == "Picture":
+            if "http://" not in postLink:
+                postLink = "http://"+postLink
             getPostDownloadableLinkPic(postLink)
         elif picOrVid == "V" or picOrVid == "VIDEO" or picOrVid == "v" or picOrVid == "video" or picOrVid == "Video":
             getPostDownloadableLinkVid(postLink)
