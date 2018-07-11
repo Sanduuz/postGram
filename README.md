@@ -91,5 +91,7 @@ You can contact me at:
 ---
 
 ## What's New
+### postGram v1.1
++ Tweaks [if http:// not included in link, automatically added]
 ### postGram v1.0
 + Core Built
