@@ -13,7 +13,6 @@ postGram is a tool made for downloading Instagram posts from public users.
  * Windows
  * Linux
  * Android
- * Mac/iOS..?
 
 ---
 
