@@ -18,8 +18,6 @@ except ImportError:
 			pip.main(["install", "pyperclip"])
 	elif install_.upper() == "N" or install_.upper() == "NO":
 		print "[!] Script might not work properly! Please install the dependencies."
-except:
-	exit("[!] Unknown Error Occured! Please report this to Sanduuz.")
 
 video_regex = r'og:video" content="(.*)"'
 image_regex = r'og:image" content="(.*)"'
@@ -57,8 +55,6 @@ def getCredz():
 			return (True, username, password)
 	except IOError:
 		return (False, "Great...")
-	except:
-		exit("[!] Unknown Error Occured! Please report this to Sanduuz.")
 
 def main(postLink):
 	try:
@@ -82,8 +78,10 @@ def main(postLink):
 		exit("[*] Exiting...")
 	except requests.exceptions.ConnectionError:
 		print "[!] Invalid link!"
-	except:
-		exit("[!] Unknown Error Occured! Please report this to Sanduuz.")
+	except requests.exceptions.InvalidSchema:
+		print "[!] Invalid link!"
+	except requests.exceptions.InvalidURL:
+		print "[!] Invalid link!"
 
 if __name__ == "__main__":
 	while True:
@@ -119,8 +117,6 @@ if __name__ == "__main__":
 							exit("\n[*] Exiting...")
 						except requests.exceptions.ConnectionError:
 							exit("\n[!] Invalid link! Exiting...")
-						except:
-							exit("[!] Unknown Error Occured! Please report this to Sanduuz.")
 					resp = login(username, password)
 					if resp['authenticated'] == True:
 						print "[+] Successfully logged in as {}!".format(username)
@@ -155,8 +151,6 @@ if __name__ == "__main__":
 									exit("\n[*] Exiting...")
 								except requests.exceptions.ConnectionError:
 									exit("\n[!] Invalid link! Exiting...")
-								except:
-									exit("[!] Unknown Error Occured! Please report this to Sanduuz.")
 						elif loadedFromConf == True:
 							postLink = str(raw_input("[?] Link to post: "))
 							if postLink == "":
@@ -198,5 +192,3 @@ if __name__ == "__main__":
 			exit("\n[*] Exiting...")
 		except requests.exceptions.ConnectionError:
 			exit("\n[!] Invalid link! Exiting...")
-		except:
-			exit("[!] Unknown Error Occured! Please report this to Sanduuz.")
