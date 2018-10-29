@@ -1,4 +1,70 @@
-# postGram | Download Instagram Posts
+# postGram2 | Download Instagram Posts
+
+A tool for downloading posts from public instagram profiles.
+
+---
+
+## What is postGram?
+postGram is a tool made for downloading Instagram posts from public users.
+
+---
+
+## Supported Operating Systems
+ * Windows
+ * Linux
+ * Android
+ * Mac/iOS..?
+
+---
+
+## Usage
+```
+python postGram2.py
+```
+
+### Bugs
+
+If you are trying to install the dependencies through 
+postGram, make sure your `pip --version` is max 9.0.3.
+
+pip version 10.0.* doesn't support installing dependencies through the pip module in scripts.
+
+You can downgrade to version 9.0.3 with `python -m pip install pip==9.0.3`
+
+If you find any bugs, please report them to me ASAP!
+
+You can contact me at:
+* Instagram: @sanduuz
+* E-mail: 19jdmz5js@protonmail.ch
+* Wickr: @sanduuz
+* Wire: @sanduuz
+
+---
+
+## What's New
+### postGram v2
++ Improved data searching algorithm
++ Added login functionality for downloading private posts
++ Automatically copies link to clipboard
++ Allows saving credentials to configuration file. [INSECURE | SEE MORE INFO BELOW]
+### postGram v1.1
++ Tweaks [if http:// not included in link, automatically added]
+### postGram v1.0
++ Core Built
+
+---
+
+### Saving credentials
+#### Saving credentials to configuration file makes logging in faster, but more insecure.
+#### The credentials are saved in plaintext to a file called credentials.
+#### Use this at your own risk and I am NOT responsible for anything you do with this.
+#### Currently you can save only 1 account to the file, but in the future I'm working towards saving many accounts to the file.
+
+---
+---
+---
+
+# postGram | Download Instagram Posts [OUTDATED]
 
 A tool for downloading posts from public instagram profiles.
 
