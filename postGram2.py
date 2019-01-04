@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 try:
-	import requests, re, sys, getpass, urllib, json, pyperclip
+	import requests, re, sys, getpass, urllib, json, webbrowser
 except ImportError:
 	print "[!] Missing Dependencies!"
 	install_ = str(raw_input("[?] Install? [Y/N]: "))
@@ -15,13 +15,15 @@ except ImportError:
 			pip.main(["install", "requests"])
 			pip.main(["install", "getpass"])
 			pip.main(["install", "urllib"])
-			pip.main(["install", "pyperclip"])
+			pip.main(["install", "webbrowser"])
 	elif install_.upper() == "N" or install_.upper() == "NO":
 		print "[!] Script might not work properly! Please install the dependencies."
 
-video_regex = r'og:video" content="(.*)"'
-image_regex = r'og:image" content="(.*)"'
+#video_regex = r'og:video" content="(.*)"'
+#image_regex = r'og:image" content="(.*)"'
+video_regex = r'"video_url":"(.*?)"'
 csrft_regex = r'csrf_token":"(.*?)"'
+image_regex = r'display_resources":\[{"src":"(.*?)"' # This could be actually better.
 
 logged_in = False
 
@@ -65,13 +67,33 @@ def main(postLink):
 			if image_ == []:
 				print "[-] Nothing found! Invalid link/user private."
 			else:
-				print "[+] Success!\nDownload link:",image_[0]
-				pyperclip.copy(str(image_[0]))
-				exit("[*] Link copied to clipboard!")
+				if len(image_) == 1:
+					print "[+] Success!\nDownload link:",image_[0]
+					webbrowser.open_new_tab(image_[0])
+					#pyperclip.copy(str(image_[0])) 			# ARE THESE TOO AGGRESSIVE?
+					exit("[*] Post opened in new tab.")
+				elif len(image_) > 1:
+					print "[*] Detected as slide post."
+					linkAmount = 1
+					for link in image_[1:]:
+						print "[Image: {}] Success!\nDownload link: {}".format(linkAmount, link)
+						webbrowser.open_new_tab(image_[linkAmount])
+						linkAmount += 1
 		else:
-			print "[+] Success!\nDownload link:",video_[0]
-			pyperclip.copy(str(video_[0]))
-			exit("[*] Link copied to clipboard!")
+			if len(video_) == 1:
+				print "[+] Success!\nDownload link:",video_[0]
+				webbrowser.open_new_tab(video_[0])
+				#pyperclip.copy(str(video_[0]))
+				exit("[*] Post opened in new tab.")
+			elif len(video_) > 1:
+				print "[*] Detected as slide post."
+				linkAmountDisp = 1
+				linkAmount = 0
+				for link in video_:
+					print "[Video: {}] Success!\nDownload link: {}".format(linkAmountDisp, video_[linkAmount])
+					webbrowser.open_new_tab(video_[linkAmount])
+					linkAmount += 1
+					linkAmountDisp += 1
 	except KeyboardInterrupt:
 		exit("[*] Exiting...")
 	except EOFError:
