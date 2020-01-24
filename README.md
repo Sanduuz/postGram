@@ -56,7 +56,7 @@ You can contact me at:
 
 ## Configuration
 The configuration file helps automate processes and makes it faster.
-It should contain 3 fields:
+A file called config.txt should be located in the working directory of postGram and it should contain 3 fields:
 - `"open_browser"	| Values: True/False | If True, the picture is opened in a new tab.`
 - `"copy_link"		| Values: True/False | If True, the link of the picture is copied to the clipboard. (Only for single slide posts.)`
 - `"prompt_login"	| Values: True/False | If True, postGram will ask if you want to log in on startup.`
