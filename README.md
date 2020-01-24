@@ -1,11 +1,11 @@
 # postGram2 | Download Instagram Posts
 
-A tool for downloading posts from public instagram profiles.
+A tool for downloading posts from instagram profiles.
 
 ---
 
 ## What is postGram?
-postGram is a tool made for downloading Instagram posts from public users.
+postGram is a tool made for downloading Instagram posts from users.
 
 ---
 
@@ -35,12 +35,13 @@ If you find any bugs, please report them to me ASAP!
 You can contact me at:
 * Instagram: @sanduuz
 * E-mail: 19jdmz5js@protonmail.ch
-* Wickr: @sanduuz
-* Wire: @sanduuz
 
 ---
 
 ## What's New
+### postGram v2.5
++ Bug fixes
++ Added a configuration file [See Instructions Below]
 ### postGram v2
 + Improved data searching algorithm
 + Added login functionality for downloading private posts
@@ -50,6 +51,24 @@ You can contact me at:
 + Tweaks [if http:// not included in link, automatically added]
 ### postGram v1.0
 + Core Built
+
+---
+
+## Configuration
+The configuration file helps automate processes and makes it faster.
+It should contain 3 fields:
+- "open_browser"	| Values: True/False | If True, the picture is opened in a new tab.
+- "copy_link"		| Values: True/False | If True, the link of the picture is copied to the clipboard. (Only for single slide posts.)
+- "prompt_login"	| Values: True/False | If True, postGram will ask if you want to log in on startup.
+
+#### Example Configuration:
+```
+{
+    "open_browser": true,
+    "copy_link": false,
+    "prompt_login": false
+}
+```
 
 ---
 
@@ -150,8 +169,6 @@ If you find any bugs, please report them to me ASAP!
 You can contact me at:
 * Instagram: @sanduuz
 * E-mail: 19jdmz5js@protonmail.ch
-* Wickr: @sanduuz
-* Wire: @sanduuz
 
 ---
 
