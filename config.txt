@@ -1,0 +1,5 @@
+{
+    "open_browser": true,
+    "copy_link": false,
+    "prompt_login": false
+}
